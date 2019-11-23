@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: app-add-deployment
+  labels:
+    app: add
+spec:
+  template:
+    metadata:
+      labels:
+        app: add
+    spec:
+      containers:
+        - name: app-add
+          image: phonxvzf/app-add
+          ports:
+            - containerPort: 5001
+          env:
+            - name: "PORT"
+              value: "5001"
+      restartPolicy: Always
