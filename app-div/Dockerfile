@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN pip install flask
+RUN pip install flask requests
 
 ENV PORT 5004
 
