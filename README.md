@@ -1,8 +1,6 @@
 # sds-calc
 A distributed integer calculator
 
---------
-
 ## HTTP Endpoints
 ### app-add
 #### Synopsis
@@ -14,6 +12,8 @@ GET http://app-add/<rhs>/<lhs>/<n>
 #### Depends on
 - None
 
+--------
+
 ### app-diff
 #### Synopsis
 ```
@@ -24,6 +24,8 @@ GET http://app-diff/<rhs>/<lhs>/<n>
 #### Depends on
 - app-add
 
+--------
+
 ### app-mult
 #### Synopsis
 ```
@@ -33,6 +35,8 @@ GET http://app-mult/<rhs>/<lhs>
 `rhs * lhs`
 #### Depends on
 - app-add
+
+--------
 
 ### app-div
 #### Synopsis
