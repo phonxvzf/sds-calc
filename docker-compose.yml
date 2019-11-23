@@ -39,7 +39,7 @@ services:
     environment:
       PORT: 5003
 
-  app-diff:
+  app-div:
     depends_on:
       - app-diff
     build:
