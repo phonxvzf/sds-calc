@@ -1,0 +1,106 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: add-deployment
+  labels:
+    app: add
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: add
+  template:
+    metadata:
+      labels:
+        app: add
+    spec:
+      containers:
+        - name: app-add
+          image: phonxvzf/app-add
+          ports:
+            - containerPort: 5001
+          env:
+            - name: "PORT"
+              value: "5001"
+      restartPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minus-deployment
+  labels:
+    app: minus
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: minus
+  template:
+    metadata:
+      labels:
+        app: minus
+    spec:
+      containers:
+        - name: app-minus
+          image: phonxvzf/app-minus
+          ports:
+            - containerPort: 5001
+          env:
+            - name: "PORT"
+              value: "5001"
+      restartPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mul-deployment
+  labels:
+    app: mul
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mul
+  template:
+    metadata:
+      labels:
+        app: mul
+    spec:
+      containers:
+        - name: app-mul
+          image: phonxvzf/app-mul
+          ports:
+            - containerPort: 5001
+          env:
+            - name: "PORT"
+              value: "5001"
+      restartPolicy: Always
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: div-deployment
+  labels:
+    app: div
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: div
+  template:
+    metadata:
+      labels:
+        app: div
+    spec:
+      containers:
+        - name: app-div
+          image: phonxvzf/app-div
+          ports:
+            - containerPort: 5001
+          env:
+            - name: "PORT"
+              value: "5001"
+      restartPolicy: Always
+---
+
