@@ -1,63 +1,55 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: add-service
+  name: app-add
   labels:
-    app: add
+    service: add
 spec:
   selector:
     app: add
   ports:
-    - protocol: TCP
-      port: 5001
-      # targetPort: 5001
+    - port: 5001
       nodePort: 30000
   type: NodePort
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: diff-service
+  name: app-diff
   labels:
-    app: diff
+    service: diff
 spec:
   selector:
     app: diff
   ports:
-    - protocol: TCP
-      port: 5001
-      # targetPort: 5001
+    - port: 5002
       nodePort: 30001
   type: NodePort
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: mul-service
+  name: app-mult
   labels:
-    app: mul
+    service: mult
 spec:
   selector:
-    app: mul
+    app: mult
   ports:
-    - protocol: TCP
-      port: 5001
-      # targetPort: 5001
+    - port: 5003
       nodePort: 30002
   type: NodePort
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: div-service
+  name: app-div
   labels:
-    app: div
+    service: div
 spec:
   selector:
     app: div
   ports:
-    - protocol: TCP
-      port: 5001
-      # targetPort: 5001
+    - port: 5004
       nodePort: 30003
   type: NodePort

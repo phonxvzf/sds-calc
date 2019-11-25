@@ -23,7 +23,6 @@ spec:
             - name: "PORT"
               value: "5001"
       restartPolicy: Always
-
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -45,36 +44,36 @@ spec:
         - name: app-diff
           image: phonxvzf/app-diff
           ports:
-            - containerPort: 5001
+            - containerPort: 5002
           env:
             - name: "PORT"
-              value: "5001"
+              value: "5002"
       restartPolicy: Always
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mul-deployment
+  name: mult-deployment
   labels:
-    app: mul
+    app: mult
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: mul
+      app: mult
   template:
     metadata:
       labels:
-        app: mul
+        app: mult
     spec:
       containers:
-        - name: app-mul
-          image: phonxvzf/app-mul
+        - name: app-mult
+          image: phonxvzf/app-mult
           ports:
-            - containerPort: 5001
+            - containerPort: 5003
           env:
             - name: "PORT"
-              value: "5001"
+              value: "5003"
       restartPolicy: Always
 ---
 apiVersion: apps/v1
@@ -97,10 +96,9 @@ spec:
         - name: app-div
           image: phonxvzf/app-div
           ports:
-            - containerPort: 5001
+            - containerPort: 5004
           env:
             - name: "PORT"
-              value: "5001"
+              value: "5004"
       restartPolicy: Always
 ---
-
