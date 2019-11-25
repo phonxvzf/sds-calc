@@ -17,12 +17,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: minus-service
+  name: diff-service
   labels:
-    app: minus
+    app: diff
 spec:
   selector:
-    app: minus
+    app: diff
   ports:
     - protocol: TCP
       port: 5001

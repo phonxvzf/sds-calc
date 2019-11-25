@@ -28,22 +28,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: minus-deployment
+  name: diff-deployment
   labels:
-    app: minus
+    app: diff
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: minus
+      app: diff
   template:
     metadata:
       labels:
-        app: minus
+        app: diff
     spec:
       containers:
-        - name: app-minus
-          image: phonxvzf/app-minus
+        - name: app-diff
+          image: phonxvzf/app-diff
           ports:
             - containerPort: 5001
           env:
