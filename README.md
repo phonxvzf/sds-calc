@@ -1,6 +1,9 @@
 # sds-calc
 A distributed integer calculator
 
+#### Installation
+See [installation section](https://www.github.com/phonxvzf/sds-calc/install)
+
 ## HTTP Endpoints
 ### app-add
 #### Synopsis
@@ -47,3 +50,4 @@ GET http://app-div/<rhs>/<lhs>
 `lhs is 0 ? inf : floor(rhs / lhs)`
 #### Depends on
 - app-diff
+
