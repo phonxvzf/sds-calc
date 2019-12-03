@@ -1,8 +1,8 @@
 # sds-calc
 A distributed integer calculator
 
-#### Installation
-See [installation section](https://www.github.com/phonxvzf/sds-calc/install)
+## Installation
+See [installation section](https://github.com/phonxvzf/sds-calc/tree/master/install)
 
 ## HTTP Endpoints
 ### app-add
