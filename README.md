@@ -2,7 +2,7 @@
 A distributed integer calculator
 
 ## Installation
-See [installation section](https://github.com/phonxvzf/sds-calc/tree/master/install)
+See [installation guide](https://github.com/phonxvzf/sds-calc/tree/master/install)
 
 ## HTTP Endpoints
 ### app-add
