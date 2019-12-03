@@ -12,7 +12,7 @@ There are 3 main components in the system architectures:
 
 The nodes should be configured in this order.
 
-### Set up Network Topology
+### Setup Network Topology
 connect all the physical nodes to the network. The network core can be just a router or a switch.
 Assign the IP to all the nodes.
 
