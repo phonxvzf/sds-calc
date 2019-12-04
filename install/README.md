@@ -18,9 +18,9 @@ Assign the IP to all the nodes.
 
 In this step, make sure that
 - Nodes' IP will not be changing. Use static IP instead of DHCP.
-- Every node is inside the same setwork (Kubernetes does not support multiply network cluster)
+- Every node is inside the same network (Kubernetes does not support multiply network cluster)
 - Network address is different from the virtual address using in the cluster. 
-(this virtual address can be configured in the pod network configuration)
+(this virtual address can be configured in the pod network configuration, might be tricky though!!!)
 
 ### Configure Load balancer
 Load balancer is a component that distributes the incoming traffic to increase availability of the system.
