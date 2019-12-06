@@ -99,7 +99,7 @@ You can restart them by removing the pods which result in new pods being created
 After the all the components are configured, the application can now be deployed.
 To creatl the deployments and servicesm, simply apply the configuration files to the kubernetes
 ``` 
-kubectl apply -f deploy-scripts/deployments.yaml deploy-scripts/services.yaml 
+kubectl apply -f deploy-scripts/deployments.yaml -f deploy-scripts/services.yaml 
 ```
 or apply your own deployments. In this case make sure that 
 **your docker applications are built on the same CPU architecture (amd64, arm, etc) as the worker node's**.
