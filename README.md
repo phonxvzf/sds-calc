@@ -38,7 +38,7 @@ GET http://app-mult:5003/<lhs>/<rhs>
 GET http://<LOAD_BALANCER_IP>:30002/<lhs>/<rhs>
 ```
 #### Returns
-`rhs * lhs`
+`lhs * rhs`
 #### Depends on
 - app-add
 
@@ -51,7 +51,7 @@ GET http://app-div:5004/<lhs>/<rhs>
 GET http://<LOAD_BALANCER_IP>:30003/<lhs>/<rhs>
 ```
 #### Returns
-`lhs is 0 ? inf : floor(rhs / lhs)`
+`lhs is 0 ? inf : floor(lhs / rhs)`
 #### Depends on
 - app-diff
 
